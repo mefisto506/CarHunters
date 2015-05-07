@@ -204,8 +204,8 @@ public class PortalController {
 
                 System.out.println("Login: User submitted: " + username + "  " + password);
 
-                Document user = userDAO.validateLogin(username, password);
-
+                Document user = (Document) userDAO.validateLogin(username, password);
+                System.out.println(user);
                 if (user != null) {
 
                     // valid user, let's log them in
